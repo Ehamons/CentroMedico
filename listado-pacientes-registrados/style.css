@@ -1,0 +1,27 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+#titulo_principal{
+    background-color: cornflowerblue;
+    padding: 15px 0px 5px 0px;
+    font-size: 2em;
+    text-align: center; 
+    font-family:monospace;
+    color: #fff;
+}
+
+.nav-bar{
+    background-color: cornflowerblue;
+    display: flex;
+    padding: 15px 0;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+}

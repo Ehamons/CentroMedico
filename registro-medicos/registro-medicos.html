@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de médicos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <h1 id="titulo_principal">Centro Médico Back-End</h1>
+    <nav>
+        <ul class="nav-bar">
+            <li><a href="../index/index.html" >Inicio</a></li>
+            <li><a href="../registro-medicos/registro-medicos.html">Registro de médicos</a></li>
+            <li><a href="../registro-pacientes/registro-pacientes.html">Registro de pacientes</a></li>
+            <li><a href="../listado-medicos-registrados/listado-medicos.html">Listado de médicos registrados</a></li>
+            <li><a href="../listado-pacientes-registrados/listado-pacientes.html">Listado de pacientes registrados</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <h2 class="titulo_seccion">Registro de médicos</h2>
+    <!-- Formulario de registro de médicos -->
+    <form action="" class="formMedicos">
+        <!-- F1 - Nombres -->
+        <label for="">Nombre(s): *</label> <br>
+        <input type="text" placeholder="Escriba su nombre" required> <br>
+        <!-- F2 - Apellidos -->
+        <label for="">Apellidos: *</label> <br>
+        <input type="text" name="" id="" placeholder="Escriba sus apellidos" required> <br>
+        <!-- F3 - Número de cédula -->
+        <label for="">Número de cédula: * </label> <br>
+        <input type="number" placeholder="Escriba su número de cédula" required> <br>
+        <!-- F4 - Número de consultorio -->
+        <label for="">Númedo de consultorio: *</label> <br>
+        <input type="number" placeholder="Escriba su número de consultorio"> <br>
+        <!-- F5 - # de teléfono -->
+        <label for="">Teléfono: *</label> <br>
+        <input type="number" placeholder="Escriba su número de teléfono" required> <br>
+        <!-- F6 - Correo electrónico -->
+        <label for="">Correo electrónico: *</label> <br>
+        <input type="email" name="" id="" placeholder="Escriba su correo electrónico" required> <br>
+        <!-- F7 - Especialidad -->
+        <label for="">Especialidad: *</label> <br>
+        <select name="" id="" required>
+            <option value="0">Seleccione su especialidad</option>
+            <option value="1">Medicina general</option>
+            <option value="2">Cardiología</option>
+            <option value="3">Medicina interna</option>
+            <option value="4">Dermatología</option>
+            <option value="5">Rehabilitación física</option>
+            <option value="6">Piscología</option>
+            <option value="7">Odontología</option>
+            <option value="8">Radiología</option>
+        </select> <br>
+        <!-- Envío formulario -->
+        <input type="submit">
+    </form> <br> <br>
+    <!-- Retorno a index -->
+    <button><a href="../index/index.html">Volver a la página de inicio</a></button>
+</body>
+</html>
