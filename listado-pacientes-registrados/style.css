@@ -1,117 +1,166 @@
 /* Global */
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #dcdcdc;
+}
+
+/* Header */
+
+.encabezado {
+  background-color: cornflowerblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px 8px;
+}
+
+.titulo_principal a {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  margin: 20px 0;
+  color: #f0f0f0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Main */
+
+.tabla {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+caption {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.tabla th {
+  padding: 0.8rem;
+  border: 2px groove #000;
+}
+
+.tabla td {
+  padding: 0.4rem;
+  border: 2px groove #000;
+}
+
+/* MediaQueries */
+
+@media (max-width: 983px) {
+  .encabezado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .titulo_principal {
+    font-size: 1.5rem;
+  }
+
+  .nav-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 0.2rem;
+  }
+
+  .tabla{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  caption {
     margin: 0;
     padding: 0;
-  }
-  body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #dcdcdc;
-  }
-  
-  /* Header */
-  
-  .encabezado {
-    background-color: cornflowerblue;
-    padding: 0.2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    color: #ffffff;
-    margin-bottom: 2rem;
-  }
-  
-  .titulo_principal {
     font-size: 2rem;
   }
-  
-  .nav-bar {
-    display: flex;
-    padding: 1rem 1.2rem;
-    list-style: none;
-    justify-content: space-evenly;
-    gap: 1rem;
-  }
-  
-  .titulo_principal a,
-  .nav-bar a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Main */
-  
-  .tabla {
-    display: flex;
+}
+
+@media (max-width: 819px) {
+  .encabezado {
     justify-content: center;
-    width: 90%;
-    margin: 0 5%;
   }
-  
+
+  .titulo_principal a{
+    font-size: 1.4rem;
+  }
+
+  .nav-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .tabla{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
   caption {
-      background-color: #000;
-      display: flex;
-      align-items: center;
-      padding: 1rem;
-      font-size: 2rem;
-      color: #fff;
-    }
-  
-  .tabla th {
-    padding: 0.8rem;
-    border: 2px groove #000;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
   }
-  
-  .tabla td {
-    padding: 0.4rem;
-    border: 2px groove #000;
+  th {
+    display: none;
   }
-  
-  @media (max-width: 768px) {
-    .encabezado {
-      justify-content: center;
-    }
-  
-    .titulo_principal {
-      font-size: 1.5rem;
-    }
-  
-    .nav-bar {
-      flex-direction: column;
-    }
-  
-    caption{
-      margin: 0;
-      padding: 0;
-      font-size: 2rem;
-      writing-mode: vertical-lr;
-      text-orientation: upright;
-    }
-  
-    th {
-      display: none;
-    }
-    td {
-      display: block;
-      color: #000;
-      padding: 0.5rem 1rem;
-      text-align: justify;
-    }
-  
-    td:first-child {
-      padding-top: 2rem;
-    }
-  
-    td:last-child {
-      padding-bottom: 2rem;
-    }
-  
-    td::before {
-      content: attr(data-cell) ": ";
-      text-transform: capitalize;
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
+  td {
+    display: block;
+    color: #000;
+    padding: 0.5rem 1rem;
+    text-align: justify;
   }
-  
+
+  td:first-child {
+    padding-top: 2rem;
+  }
+
+  td:last-child {
+    padding-bottom: 2rem;
+  }
+
+  td::before {
+    content: attr(data-cell) ": ";
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}

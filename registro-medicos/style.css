@@ -1,38 +1,109 @@
+/* Global */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: content-box;
 }
 
-#titulo_principal{
-    background-color: cornflowerblue;
-    padding: 15px 0px 5px 0px;
-    font-size: 2em;
-    text-align: center; 
-    font-family:monospace;
-    color: #fff;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #dcdcdc;
 }
 
-.nav-bar{
+/* Header */
+
+.encabezado {
   background-color: cornflowerblue;
   display: flex;
-  padding: 15px 0;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px 8px;
+}
+
+
+.titulo_principal a {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  text-align: center;
   list-style: none;
+  gap: 1rem;
 }
 
 .nav-bar a {
   text-decoration: none;
-  color: #fff;
-  font-size: 1.1rem;
+  margin:  20px 0;
+  color: #f0f0f0;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
-.titulo_seccion{text-align: center;
-    margin: 5%;}
+/* Main */
 
-.formMedicos{
+.titulo_seccion {
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.formMedicos {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 45rem;
+  margin: 2rem auto;
+  padding: 2rem 1rem 1rem;
+  box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+  .encabezado {
     display: flex;
     flex-direction: column;
-    margin: 5% 30%;
-    padding: 19px;
-    border: 1px solid black;
+    justify-content: center;
+  }
+
+  .titulo_principal {
+    font-size: 1.5rem;
+  }
+
+  .nav-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: .2rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .encabezado {
+    justify-content: center;
+  }
+
+  .titulo_principal a{
+    font-size: 1.4rem;
+  }
+
+  .nav-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
 }

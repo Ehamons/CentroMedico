@@ -2,7 +2,9 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: content-box;
 }
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #dcdcdc;
@@ -12,51 +14,58 @@ body {
 
 .encabezado {
   background-color: cornflowerblue;
-  padding: 0.2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
-  color: #ffffff;
-  margin-bottom: 2rem;
+  flex-wrap: nowrap;
+  padding: 10px 8px;
 }
 
-.titulo_principal {
-  font-size: 2rem;
+.titulo_principal a {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
 }
 
 .nav-bar {
-  display: flex;
-  padding: 1rem 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  text-align: center;
   list-style: none;
-  justify-content: space-evenly;
   gap: 1rem;
 }
 
-.titulo_principal a,
 .nav-bar a {
-  color: #fff;
   text-decoration: none;
+  margin: 20px 0;
+  color: #f0f0f0;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
-
 /* Main */
 
 .tabla {
   display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
   justify-content: center;
-  width: 90%;
-  margin: 0 5%;
+  margin: 2rem auto;
 }
 
 caption {
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    font-size: 2rem;
-    color: #fff;
-  }
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
 
 .tabla th {
   padding: 0.8rem;
@@ -68,8 +77,12 @@ caption {
   border: 2px groove #000;
 }
 
-@media (max-width: 768px) {
+/* Mediaqueries */
+
+@media (max-width: 1243px) {
   .encabezado {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
   }
 
@@ -78,10 +91,48 @@ caption {
   }
 
   .nav-bar {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 0.2rem;
   }
 
-  caption{
+  .tabla {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  caption {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1078px) {
+  .encabezado {
+    justify-content: center;
+  }
+
+  .titulo_principal a {
+    font-size: 1.4rem;
+  }
+
+  .nav-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .tabla{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  caption {
     margin: 0;
     padding: 0;
     font-size: 2rem;

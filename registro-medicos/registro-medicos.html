@@ -1,62 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro de médicos</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<header>
-    <h1 id="titulo_principal">Centro Médico Back-End</h1>
-    <nav>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="encabezado">
+      <h1 class="titulo_principal">
+        <a href="../index.html">Centro Médico Back-End</a>
+      </h1>
+      <nav>
         <ul class="nav-bar">
-            <li><a href="../index/index.html" >Inicio</a></li>
-            <li><a href="../registro-medicos/registro-medicos.html">Registro de médicos</a></li>
-            <li><a href="../registro-pacientes/registro-pacientes.html">Registro de pacientes</a></li>
-            <li><a href="../listado-medicos-registrados/listado-medicos.html">Listado de médicos registrados</a></li>
-            <li><a href="../listado-pacientes-registrados/listado-pacientes.html">Listado de pacientes registrados</a></li>
+          <li>
+            <a href="../registro-medicos/registro-medicos.html"
+              >Registro de médicos</a
+            >
+          </li>
+          <li>
+            <a href="../registro-pacientes/registro-pacientes.html"
+              >Registro de pacientes</a
+            >
+          </li>
+          <li>
+            <a href="../listado-medicos-registrados/listado-medicos.html"
+              >Médicos registrados</a
+            >
+          </li>
+          <li>
+            <a href="../listado-pacientes-registrados/listado-pacientes.html"
+              >Pacientes registrados</a
+            >
+          </li>
         </ul>
-    </nav>
-</header>
-<body>
-    <h2 class="titulo_seccion">Registro de médicos</h2>
-    <!-- Formulario de registro de médicos -->
-    <form action="" class="formMedicos">
-        <!-- F1 - Nombres -->
-        <label for="">Nombre(s): *</label> <br>
-        <input type="text" placeholder="Escriba su nombre" required> <br>
-        <!-- F2 - Apellidos -->
-        <label for="">Apellidos: *</label> <br>
-        <input type="text" name="" id="" placeholder="Escriba sus apellidos" required> <br>
-        <!-- F3 - Número de cédula -->
-        <label for="">Número de cédula: * </label> <br>
-        <input type="number" placeholder="Escriba su número de cédula" required> <br>
-        <!-- F4 - Número de consultorio -->
-        <label for="">Númedo de consultorio: *</label> <br>
-        <input type="number" placeholder="Escriba su número de consultorio"> <br>
-        <!-- F5 - # de teléfono -->
-        <label for="">Teléfono: *</label> <br>
-        <input type="number" placeholder="Escriba su número de teléfono" required> <br>
-        <!-- F6 - Correo electrónico -->
-        <label for="">Correo electrónico: *</label> <br>
-        <input type="email" name="" id="" placeholder="Escriba su correo electrónico" required> <br>
-        <!-- F7 - Especialidad -->
-        <label for="">Especialidad: *</label> <br>
-        <select name="" id="" required>
-            <option value="0">Seleccione su especialidad</option>
-            <option value="1">Medicina general</option>
-            <option value="2">Cardiología</option>
-            <option value="3">Medicina interna</option>
-            <option value="4">Dermatología</option>
-            <option value="5">Rehabilitación física</option>
-            <option value="6">Piscología</option>
-            <option value="7">Odontología</option>
-            <option value="8">Radiología</option>
-        </select> <br>
+      </nav>
+    </header>
+    <main class="contenido">
+      <!-- Formulario de registro de médicos -->
+      <form action="" class="formMedicos">
+        <h2 class="titulo_seccion">Registro de médicos</h2>
+        <!-- Grupo: Nombres -->
+        <label for="nombres">Nombre(s): *</label> <br />
+        <input
+          type="text"
+          name="nombres"
+          id="nombres"
+          placeholder="Escriba su nombre"
+          required
+        />
+        <br />
+        <!-- Grupo: Apellidos -->
+        <label for="apellidos">Apellidos: *</label> <br />
+        <input
+          type="text"
+          name="apellidos"
+          id="apellidos"
+          placeholder="Escriba sus apellidos"
+          required
+        />
+        <br />
+        <!-- Grupo: Número de cédula -->
+        <label for="identificacion">Número de cédula: * </label> <br />
+        <input
+          type="number"
+          name="identificacion"
+          id="identificacion"
+          placeholder="Escriba su número de cédula"
+          required
+        />
+        <br />
+        <!-- Grupo: Número de consultorio -->
+        <label for="consultorio">Númedo de consultorio: *</label> <br />
+        <input
+          type="number"
+          name="consultorio"
+          id="consultorio"
+          placeholder="Escriba su número de consultorio"
+          required
+        />
+        <br />
+        <!-- Grupo: Número de teléfono -->
+        <label for="telefono">Teléfono: *</label> <br />
+        <input
+          type="number"
+          name="telefono"
+          id="telefono"
+          placeholder="Escriba su número de teléfono"
+          required
+        />
+        <br />
+        <!-- Grupo: Correo electrónico -->
+        <label for="email">Correo electrónico: *</label> <br />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Escriba su correo electrónico"
+          required
+        />
+        <br />
+        <!-- Grupo: Especialidad -->
+        <label for="especialidad">Especialidad: *</label> <br />
+        <select name="especialidad" id="especialidad" required>
+          <option value="0">Seleccione su especialidad</option>
+          <option value="medicina_general">Medicina general</option>
+          <option value="cardiologia">Cardiología</option>
+          <option value="3medicina_interna">Medicina interna</option>
+          <option value="dermatologia">Dermatología</option>
+          <option value="rehabilitacion_fisica">Rehabilitación física</option>
+          <option value="psicologia">Piscología</option>
+          <option value="odontologia">Odontología</option>
+          <option value="radiologia">Radiología</option>
+        </select>
+        <br />
         <!-- Envío formulario -->
-        <input type="submit">
-    </form> <br> <br>
-    <!-- Retorno a index -->
-    <button><a href="../index/index.html">Volver a la página de inicio</a></button>
-</body>
+        <input type="submit" class="boton_form" />
+      </form>
+    </main>
+  </body>
 </html>
