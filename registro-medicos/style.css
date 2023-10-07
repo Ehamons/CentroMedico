@@ -72,7 +72,7 @@ body {
 
 /* Media Queries */
 
-@media (max-width: 900px) {
+@media (max-width: 1243px) {
   .encabezado {
     display: flex;
     flex-direction: column;
