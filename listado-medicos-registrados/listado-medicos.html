@@ -9,9 +9,9 @@
   <body>
     <!-- Header -->
     <header class="encabezado">
-        <h1 class="titulo_principal">
-          <a href="../index.html">Centro Médico Back-End</a>
-        </h1>
+      <h1 class="titulo_principal">
+        <a href="../index.html">Centro Médico Back-End</a>
+      </h1>
       <nav>
         <ul class="nav-bar">
           <li>
@@ -44,59 +44,64 @@
         <caption>
           Listado de médicos registrados
         </caption>
-        <tr>
+        <thead>
           <!-- Labels -->
-          <th>Nombres</th>
-          <th>Apellidos</th>
-          <th>Número de cédula</th>
-          <th>Número de consultorio</th>
-          <th>Teléfono</th>
-          <th>Correo</th>
-          <th>Especialidad</th>
-          <th>Paciente</th>
-        </tr>
-        <!-- Data -->
-        <tr>
-          <td data-cell="nombres">José Camilo</td>
-          <td data-cell="apellidos">Pinzón Rueda</td>
-          <td data-cell="cédula">1234567890</td>
-          <td data-cell="consultorio">302</td>
-          <td data-cell="teléfono">310XXXXXXX</td>
-          <td data-cell="correo">joserueda@email.com</td>
-          <td data-cell="especialidad">Cardiología</td>
-          <td data-cell="paciente">Francisco Rodríguez Peralta</td>
-        </tr>
-        <tr>
-          <td data-cell="nombres">Carlos Alejandro</td>
-          <td data-cell="apellidos">Gómez Trujillo</td>
-          <td data-cell="cédula">2345678901</td>
-          <td data-cell="consultorio">107</td>
-          <td data-cell="teléfono">312XXXXXXX</td>
-          <td data-cell="correo">carlosgomez@email.com</td>
-          <td data-cell="especialidad">Medicina Interna</td>
-          <td data-cell="paciente">Luz Martina Rodríguez Peralta</td>
-        </tr>
-        <tr>
-          <td data-cell="nombres">Antonio</td>
-          <td data-cell="apellidos">Macías Fernandez</td>
-          <td data-cell="cédula">3456789012</td>
-          <td data-cell="consultorio">201</td>
-          <td data-cell="teléfono">314XXXXXXX</td>
-          <td data-cell="correo">joserueda@email.com</td>
-          <td data-cell="especialidad">Dermatología</td>
-          <td data-cell="paciente">Andrés Esteban Sánchez Rincón</td>
-        </tr>
-        <tr>
-          <td data-cell="nombres">Diego</td>
-          <td data-cell="apellidos">Alvarado Mora</td>
-          <td data-cell="cédula">4567890123</td>
-          <td data-cell="consultorio">202</td>
-          <td data-cell="teléfono">315XXXXXXX</td>
-          <td data-cell="correo">joserueda@email.com</td>
-          <td data-cell="especialidad">Dermatología</td>
-          <td data-cell="paciente">María Fernanda Mora Perez</td>
-        </tr>
+          <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Número de cédula</th>
+            <th>Número de consultorio</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+            <th>Especialidad</th>
+            <th>Paciente</th>
+          </tr>
+        </thead>
+        <tbody id="data_tabla_medicos">
+          <!-- Data -->
+          <tr>
+            <td data-cell="nombres">José Camilo</td>
+            <td data-cell="apellidos">Pinzón Rueda</td>
+            <td data-cell="cédula">1234567890</td>
+            <td data-cell="consultorio">302</td>
+            <td data-cell="teléfono">310XXXXXXX</td>
+            <td data-cell="correo">joserueda@email.com</td>
+            <td data-cell="especialidad">Cardiología</td>
+            <td data-cell="paciente">Francisco Rodríguez Peralta</td>
+          </tr>
+          <tr>
+            <td data-cell="nombres">Carlos Alejandro</td>
+            <td data-cell="apellidos">Gómez Trujillo</td>
+            <td data-cell="cédula">2345678901</td>
+            <td data-cell="consultorio">107</td>
+            <td data-cell="teléfono">312XXXXXXX</td>
+            <td data-cell="correo">carlosgomez@email.com</td>
+            <td data-cell="especialidad">Medicina Interna</td>
+            <td data-cell="paciente">Luz Martina Rodríguez Peralta</td>
+          </tr>
+          <tr>
+            <td data-cell="nombres">Antonio</td>
+            <td data-cell="apellidos">Macías Fernandez</td>
+            <td data-cell="cédula">3456789012</td>
+            <td data-cell="consultorio">201</td>
+            <td data-cell="teléfono">314XXXXXXX</td>
+            <td data-cell="correo">joserueda@email.com</td>
+            <td data-cell="especialidad">Dermatología</td>
+            <td data-cell="paciente">Andrés Esteban Sánchez Rincón</td>
+          </tr>
+          <tr>
+            <td data-cell="nombres">Diego</td>
+            <td data-cell="apellidos">Alvarado Mora</td>
+            <td data-cell="cédula">4567890123</td>
+            <td data-cell="consultorio">202</td>
+            <td data-cell="teléfono">315XXXXXXX</td>
+            <td data-cell="correo">joserueda@email.com</td>
+            <td data-cell="especialidad">Dermatología</td>
+            <td data-cell="paciente">María Fernanda Mora Perez</td>
+          </tr>
+        </tbody>
       </table>
     </main>
+    <script src="../app.js"></script>
   </body>
 </html>

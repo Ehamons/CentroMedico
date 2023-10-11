@@ -52,6 +52,7 @@ body {
 
 .tabla {
   display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
   align-items: stretch;
   justify-content: center;

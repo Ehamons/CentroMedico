@@ -45,17 +45,20 @@
           Listado de pacientes registrados
         </caption>
         <!-- Labels -->
-        <tr>
-          <th>Nombres</th>
-          <th>Apellidos</th>
-          <th>Número de cédula</th>
-          <th>Edad</th>
-          <th>Teléfono</th>
-          <th>Especialidad</th>
-          <th>Médico encargado</th>
-        </tr>
+        <thead>
+          <tr>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Número de cédula</th>
+            <th>Edad</th>
+            <th>Teléfono</th>
+            <th>Especialidad</th>
+            <th>Médico encargado</th>
+          </tr>
+        </thead>
         <!-- Data -->
-        <tr>
+        <tbody id="data_tabla_pacientes">
+          <tr>
             <td data-cell="nombres">Francisco</td>
             <td data-cell="apellidos">Rodríguez Peralta</td>
             <td data-cell="cédula">0987654321</td>
@@ -63,17 +66,19 @@
             <td data-cell="teléfono">322XXXXXXX</td>
             <td data-cell="especialidad">Cardiología</td>
             <td data-cell="médico encargado">José Camilo Pinzón Rueda</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td data-cell="nombres">Luz Martina</td>
             <td data-cell="apellidos">Rodríguez Peralta</td>
             <td data-cell="cédula">9876543210</td>
             <td data-cell="edad">76</td>
             <td data-cell="teléfono">310XXXXXXX</td>
             <td data-cell="especialidad">Medicina Interna</td>
-            <td data-cell="médico encargado">Carlos Alejandro Gómez	Trujillo</td>
-        </tr>
-        <tr>
+            <td data-cell="médico encargado">
+              Carlos Alejandro Gómez Trujillo
+            </td>
+          </tr>
+          <tr>
             <td data-cell="nombres">Andrés Esteban</td>
             <td data-cell="apellidos">Sánchez Rincón</td>
             <td data-cell="cédula">8765432109</td>
@@ -81,8 +86,8 @@
             <td data-cell="teléfono">315XXXXXXX</td>
             <td data-cell="especialidad">Dermatología</td>
             <td data-cell="médico encargado">Antonio Macías Fernandez</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td data-cell="nombres">María Fernanda</td>
             <td data-cell="apellidos">Mora Perez</td>
             <td data-cell="cédula">7654321098</td>
@@ -90,8 +95,10 @@
             <td data-cell="teléfono">322XXXXXXX</td>
             <td data-cell="especialidad">Dermatología</td>
             <td data-cell="médico encargado">Diego Alvarado Mora</td>
-        </tr>
+          </tr>
+        </tbody>
       </table>
     </main>
+    <script src="../app.js"></script>
   </body>
 </html>
