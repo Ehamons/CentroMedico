@@ -6,6 +6,10 @@ body {
   box-sizing: content-box;
 }
 
+body{
+  background-color: #dcdcdc;
+}
+
 .contenedor {
   display: grid;
   gap: 79px;
@@ -93,6 +97,9 @@ td {
 .pie_pagina {
   background-color: cornflowerblue;
   color: #dcdcdc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
